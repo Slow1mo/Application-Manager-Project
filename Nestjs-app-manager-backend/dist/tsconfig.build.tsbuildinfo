@@ -3472,13 +3472,13 @@
         "affectsGlobalScope": false
       },
       "../src/auth/auth.service.ts": {
-        "version": "93bf3c46d5907000ca8e482a5133f96d3a12cd2089ecd5789d362973f1f4e23f",
-        "signature": "4a63d9cd388a3f1b7552bd01a3e98cd484c9bd71104181e01b1664ba9fc542a6",
+        "version": "d565e43c1b82e319990ba0f590a2269bb467a1c2cc3651c737da464cedb11baf",
+        "signature": "efac52978d861657d478b9e47a0c95ce919c27541448e62032cc30c4387893d9",
         "affectsGlobalScope": false
       },
       "../src/auth/auth.controller.ts": {
-        "version": "d1d2d0406e49a32936b750e529efb35dd6db82b0462388242afd1b48582bb316",
-        "signature": "bb8c9e5645fca51d83060bb5f66d1afc0b5eeb92a9a903f51294facf52f6050f",
+        "version": "59ad21f89dd283a9abea5186b51932a5dee5c6fa7f76b83ddde00ddf0f57f866",
+        "signature": "d1472078b5968148b8950981402b4bb744f2e0949d5f24cd38259d6d9f495f24",
         "affectsGlobalScope": false
       },
       "../src/auth/jwt.strategy.ts": {
@@ -9913,11 +9913,13 @@
       ],
       "../src/auth/auth.controller.ts": [
         "../src/auth/auth.service.ts",
-        "../src/auth/dto/auth-credentials.dto.ts"
+        "../src/auth/dto/auth-credentials.dto.ts",
+        "../src/auth/dto/signup-credentials.dto.ts"
       ],
       "../src/auth/auth.service.ts": [
         "../node_modules/@nestjs/jwt/index.d.ts",
         "../src/auth/dto/auth-credentials.dto.ts",
+        "../src/auth/dto/signup-credentials.dto.ts",
         "../src/auth/user.repository.ts"
       ],
       "../src/auth/jwt.strategy.ts": [

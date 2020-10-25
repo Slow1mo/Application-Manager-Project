@@ -14,8 +14,8 @@ export class AuthService {
         private jwtService: JwtService,
     ){}
 
-    async signUp(@Body(ValidationPipe) authCredentialsDTO : AuthCredentialsDTO) : Promise<void> { //validation pipe will validate the dto with the specified rules.
-        return this.userRepository.signUp(authCredentialsDTO);
+    async signUp(@Body(ValidationPipe) signupCredentialsDTO: SignUpCredentialsDTO) : Promise<void> { //validation pipe will validate the dto with the specified rules.
+        return this.userRepository.signUp(signupCredentialsDTO);
     }
 
     async signIn(authCredentialsDTO: AuthCredentialsDTO) : Promise<{accessToken: string}> {
