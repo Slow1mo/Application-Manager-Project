@@ -27,6 +27,7 @@ let TasksController = class TasksController {
         this.tasksService = tasksService;
     }
     getTasks(filterDTO, user) {
+        console.log(user);
         return this.tasksService.getTasks(filterDTO, user);
     }
     getTaskById(id, user) {
@@ -44,7 +45,7 @@ let TasksController = class TasksController {
 };
 __decorate([
     common_1.Get(),
-    __param(0, common_1.Query(common_1.ValidationPipe)),
+    __param(0, common_1.Query(common_1.ValidationPipe)), __param(1, get_user_decorator_1.GetUser()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [get_tasks_filter_dto_1.GetTasksFilterDTO, user_entity_1.User]),
     __metadata("design:returntype", Promise)

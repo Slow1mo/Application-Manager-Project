@@ -3182,7 +3182,7 @@
         "affectsGlobalScope": false
       },
       "../src/tasks/tasks.controller.ts": {
-        "version": "2254bbd89f3314e9659331c535d72dcf80a17019d49838c0db2afd99e7e5a147",
+        "version": "102e52826504c2c67f6120b5af63da72c95535dbb6e7a1b143f300c44698fe06",
         "signature": "a67c84afde7d2290c79d9c6c14b085b65cc7ab73a7bdab25facd93be162548bd",
         "affectsGlobalScope": false
       },
@@ -3472,7 +3472,7 @@
         "affectsGlobalScope": false
       },
       "../src/auth/auth.service.ts": {
-        "version": "aa1fa7db9d27fef81b8936eda44ebdf8df5160f20ba007e246c525b85eb0aa34",
+        "version": "93bf3c46d5907000ca8e482a5133f96d3a12cd2089ecd5789d362973f1f4e23f",
         "signature": "4a63d9cd388a3f1b7552bd01a3e98cd484c9bd71104181e01b1664ba9fc542a6",
         "affectsGlobalScope": false
       },
