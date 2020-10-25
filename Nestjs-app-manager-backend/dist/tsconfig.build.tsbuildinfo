@@ -3482,7 +3482,7 @@
         "affectsGlobalScope": false
       },
       "../src/auth/jwt.strategy.ts": {
-        "version": "71570b6cdcd556b70e8aca53b9dcd598acf0baac177240c9c009fb134f1e4ac5",
+        "version": "5b14a184b0cea798d2e581b11e6177da53c6ddda02d35266c0f3be3bd84c368d",
         "signature": "3c9b4761fb3b6befc3d23f06a1a252102fed2f73ef9637e818112458a2140205",
         "affectsGlobalScope": false
       },
