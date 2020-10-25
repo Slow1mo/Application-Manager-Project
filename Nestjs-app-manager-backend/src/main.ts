@@ -6,7 +6,7 @@ async function bootstrap() {
 
 const logger = new Logger('bootstrap');
 
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, { cors: true });
   await app.listen(3000);
 
   const port = 3000;
