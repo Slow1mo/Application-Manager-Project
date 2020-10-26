@@ -1,9 +1,9 @@
 import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
-import { TaskStatus } from './task-status.enum';
+import { ApplicationStatus } from './application-status.enum';
 import { User } from '../auth/user.entity';
 
 @Entity()
-export class Task extends BaseEntity {
+export class Application extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -14,9 +14,9 @@ export class Task extends BaseEntity {
   description: string;
 
   @Column()
-  status: TaskStatus;
+  status: ApplicationStatus;
 
-  @ManyToOne(type => User , user => user.tasks, {eager : false})
+  @ManyToOne(type => User , user => user.applications, {eager : false})
   user: User;
 
   @Column()

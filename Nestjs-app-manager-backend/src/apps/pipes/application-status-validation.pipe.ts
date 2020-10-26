@@ -1,11 +1,11 @@
 import { PipeTransform, BadRequestException } from '@nestjs/common';
-import { TaskStatus } from '../task-status.enum';
+import { ApplicationStatus } from '../application-status.enum';
 
-export class TaskStatusValidationPipe implements PipeTransform {
+export class ApplicationStatusValidationPipe implements PipeTransform {
   readonly allowedStatuses = [
-    TaskStatus.OPEN,
-    TaskStatus.IN_PROGRESS,
-    TaskStatus.DONE,
+    ApplicationStatus.OPEN,
+    ApplicationStatus.IN_PROGRESS,
+    ApplicationStatus.DONE,
   ];
 
   transform(value: any) {

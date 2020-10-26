@@ -1,6 +1,6 @@
 {
     "server": {
-        "origin":"http://cristian-react-app-manager-frontend.s3-website-eu-west-1.amazonaws.com"
+        "origin":"http://cristian-react-app-manager-backend.s3-website-eu-west-1.amazonaws.com"
     },
     
     "db": {
