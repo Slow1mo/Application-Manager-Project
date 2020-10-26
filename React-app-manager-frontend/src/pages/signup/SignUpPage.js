@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { Button, TextField } from '@material-ui/core';
-import styled from 'styled-components';
+import React, { Component } from "react";
+import { Button, TextField } from "@material-ui/core";
+import styled from "styled-components";
 
-import './SignUpPage.scss';
-import { inject } from 'mobx-react';
-import ErrorMessage from '../../components/ErrorMessage';
+import "./SignUpPage.scss";
+import { inject } from "mobx-react";
+import ErrorMessage from "../../components/ErrorMessage";
 
 const Heading = styled.h1`
   margin-top: 0;
@@ -22,23 +22,47 @@ const FormField = styled(TextField)`
   width: 100%;
 `;
 
-@inject('userStore', 'routerStore')
+@inject("userStore", "routerStore")
 class SignUpPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
-      password: '',
+      username: "",
+      password: "",
+      email: "",
+      fullname: "",
+      number: "",
+      address: "",
+      postalcode: "",
+      city: "",
       errorMessage: null,
     };
   }
 
   submit = async () => {
-    const { username, password } = this.state;
+    const {
+      username,
+      password,
+      email,
+      fullname,
+      number,
+      address,
+      postalcode,
+      city,
+    } = this.state;
 
     try {
-      await this.props.userStore.signup(username, password);
-      this.props.routerStore.push('/signin');
+      await this.props.userStore.signup(
+        username,
+        password,
+        email,
+        fullname,
+        number,
+        address,
+        postalcode,
+        city
+      );
+      this.props.routerStore.push("/signin");
     } catch (error) {
       const errorMessage = error.response.data.message;
       this.setState({ errorMessage });
@@ -52,7 +76,7 @@ class SignUpPage extends Component {
       <div className="fullscreen-wrapper">
         <FormContainer>
           <Heading>Join us!</Heading>
-          <p>Start managing tasks easily.</p>
+          <p>Find new employees with ease.</p>
 
           {errorMessage && <ErrorMessage message={this.state.errorMessage} />}
 
@@ -62,7 +86,7 @@ class SignUpPage extends Component {
               label="Username"
               margin="dense"
               variant="outlined"
-              onChange={e => this.setState({ username: e.target.value })}
+              onChange={(e) => this.setState({ username: e.target.value })}
             />
           </div>
           <div>
@@ -72,13 +96,63 @@ class SignUpPage extends Component {
               margin="dense"
               variant="outlined"
               type="password"
-              onChange={e => this.setState({ password: e.target.value })}
+              onChange={(e) => this.setState({ password: e.target.value })}
             />
           </div>
-          <p>
-            Passwords must contain at least 1 upper case letter, 1 lower case letter and one number OR special charracter.
-          </p>
-          <hr/>
+          <div>
+            <FormField
+              id="outlined-name"
+              label="E-Mail"
+              margin="dense"
+              variant="outlined"
+              onChange={(e) => this.setState({ email: e.target.value })}
+            />
+          </div>
+          <div>
+            <FormField
+              id="outlined-name"
+              label="Full Name"
+              margin="dense"
+              variant="outlined"
+              onChange={(e) => this.setState({ fullname: e.target.value })}
+            />
+          </div>
+          <div>
+            <FormField
+              id="outlined-name"
+              label="Telephone Number"
+              margin="dense"
+              variant="outlined"
+              onChange={(e) => this.setState({ number: e.target.value })}
+            />
+          </div>
+          <div>
+            <FormField
+              id="outlined-name"
+              label="Address - Street and number"
+              margin="dense"
+              variant="outlined"
+              onChange={(e) => this.setState({ address: e.target.value })}
+            />
+          </div>
+          <div>
+            <FormField
+              id="outlined-name"
+              label="Postal Code / ZIP Code"
+              margin="dense"
+              variant="outlined"
+              onChange={(e) => this.setState({ postalcode: e.target.value })}
+            />
+          </div>
+          <div>
+            <FormField
+              id="outlined-name"
+              label="City"
+              margin="dense"
+              variant="outlined"
+              onChange={(e) => this.setState({ city: e.target.value })}
+            />
+          </div>
           <div>
             <Button
               fullWidth

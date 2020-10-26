@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { TextField, FormControl, Button } from '@material-ui/core';
-import styled from 'styled-components';
-import { inject } from 'mobx-react';
-import ErrorMessage from '../../components/ErrorMessage';
+import React, { Component } from "react";
+import { TextField, FormControl, Button } from "@material-ui/core";
+import styled from "styled-components";
+import { inject } from "mobx-react";
+import ErrorMessage from "../../components/ErrorMessage";
 
 const FormWrapper = styled.div`
   width: 100vw;
@@ -20,25 +20,26 @@ const FormContainer = styled.div`
   border-radius: 5px;
 `;
 
-@inject('tasksStore', 'routerStore')
-class CreateTaskPage extends Component {
+@inject("applicationsStore", "routerStore")
+class CreateApplicationPage extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      title: '',
-      description: '',
+      title: "",
+      description: "",
+      status: "OPEN",
       errorMessage: null,
     };
   }
 
-  handleSubmitTask = async () => {
-    const { tasksStore, routerStore } = this.props;
+  handleSubmitApplication = async () => {
+    const { applicationsStore, routerStore } = this.props;
     const { title, description } = this.state;
 
     try {
-      await tasksStore.createTask(title, description);
-      routerStore.push('/tasks');
+      await applicationsStore.createApplication(title, description);
+      routerStore.push("/applications");
     } catch (error) {
       const errorMessage = error.response.data.message;
       this.setState({ errorMessage });
@@ -49,10 +50,12 @@ class CreateTaskPage extends Component {
     return (
       <FormWrapper>
         <FormContainer>
-          <h1>Create a new task</h1>
-          <p>Provide information about the task you wish to complete.</p>
+          <h1>Create a new job ad</h1>
+          <p>Provide information about the job ad.</p>
 
-          { this.state.errorMessage && <ErrorMessage message={this.state.errorMessage} />}
+          {this.state.errorMessage && (
+            <ErrorMessage message={this.state.errorMessage} />
+          )}
 
           <FormControl fullWidth>
             <TextField
@@ -60,7 +63,7 @@ class CreateTaskPage extends Component {
               placeholder="Title"
               margin="normal"
               variant="outlined"
-              onChange={e => this.setState({ title: e.target.value })}
+              onChange={(e) => this.setState({ title: e.target.value })}
             />
           </FormControl>
           <FormControl fullWidth>
@@ -71,18 +74,18 @@ class CreateTaskPage extends Component {
               rows="8"
               margin="normal"
               variant="outlined"
-              onChange={e => this.setState({ description: e.target.value })}
+              onChange={(e) => this.setState({ description: e.target.value })}
             />
           </FormControl>
 
           <Button
-            style={{ marginTop: '10px' }}
+            style={{ marginTop: "10px" }}
             fullWidth
             variant="contained"
             color="primary"
-            onClick={this.handleSubmitTask}
+            onClick={this.handleSubmitApplication}
           >
-            CREATE TASK
+            CREATE JOB AD
           </Button>
         </FormContainer>
       </FormWrapper>
@@ -90,4 +93,4 @@ class CreateTaskPage extends Component {
   }
 }
 
-export default CreateTaskPage;
+export default CreateApplicationPage;

@@ -34,7 +34,7 @@ export class SignUpCredentialsDTO {
     address: string;
 
     @IsString()
-    @MinLength(3)
+    @MinLength(1)
     postalcode: string;
 
     @IsString()

@@ -14,8 +14,26 @@ export default class AuthService extends BaseHttpService {
     return result.data.username;
   }
 
-  async signup(username, password) {
-    await this.post(`auth/signup`, { username, password });
+  async signup(
+    username,
+    password,
+    email,
+    fullname,
+    number,
+    address,
+    postalcode,
+    city
+  ) {
+    await this.post(`auth/signup`, {
+      username,
+      password,
+      email,
+      fullname,
+      number,
+      address,
+      postalcode,
+      city,
+    });
   }
 
   async signout() {

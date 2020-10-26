@@ -53,7 +53,7 @@ __decorate([
 ], SignUpCredentialsDTO.prototype, "address", void 0);
 __decorate([
     class_validator_1.IsString(),
-    class_validator_1.MinLength(3),
+    class_validator_1.MinLength(1),
     __metadata("design:type", String)
 ], SignUpCredentialsDTO.prototype, "postalcode", void 0);
 __decorate([

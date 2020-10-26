@@ -3192,7 +3192,7 @@
         "affectsGlobalScope": false
       },
       "../src/auth/dto/signup-credentials.dto.ts": {
-        "version": "05e7307b3992af9c450f5ad5893138a5b10d545d06ea7401162ce29e3579381d",
+        "version": "84d45815161725319fb7bb2dc50a5c7b9bfdc67bf819e5c95c423a295d6018eb",
         "signature": "b2e171b474919128d9618ee63b7c862c3789cc0838894ec4c7b76fca666e7caf",
         "affectsGlobalScope": false
       },
@@ -3689,11 +3689,6 @@
       "../src/main.ts": {
         "version": "8de4f2e95660d711ab9984a19be7cc929b4e6f033f0a4f064910ba084d191b0b",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
-        "affectsGlobalScope": false
-      },
-      "../src/applications/applications.controller.ts": {
-        "version": "4369312a3cfc6e3e8f398f51ec7116efdc6c0a779d2f6b20d86c8c6d9a2765f6",
-        "signature": "ac70f02cd2986fde4c20f49c133bade4e6cf32604fa76872284a48e5e611cecd",
         "affectsGlobalScope": false
       },
       "../src/auth/dto/user-details.dto.ts": {
@@ -6907,12 +6902,6 @@
         "../src/auth/auth.module.ts",
         "../src/config/typeorm.config.ts"
       ],
-      "../src/applications/applications.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/passport/index.d.ts",
-        "../src/auth/get-user.decorator.ts",
-        "../src/auth/user.entity.ts"
-      ],
       "../src/apps/application.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../src/apps/application-status.enum.ts",
@@ -9923,9 +9912,6 @@
         "../node_modules/typeorm/metadata/relationmetadata.d.ts",
         "../node_modules/typeorm/query-runner/queryrunner.d.ts"
       ],
-      "../src/applications/applications.controller.ts": [
-        "../src/auth/user.entity.ts"
-      ],
       "../src/apps/application.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../src/apps/application-status.enum.ts",
@@ -10767,59 +10753,6 @@
       "../node_modules/typescript/lib/lib.scripthost.d.ts",
       "../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
       "../src/app.module.ts",
-      [
-        "../src/applications/applications.controller.ts",
-        [
-          {
-            "file": "../src/applications/applications.controller.ts",
-            "start": 186,
-            "length": 24,
-            "messageText": "Cannot find module './applications.service' or its corresponding type declarations.",
-            "category": 1,
-            "code": 2307
-          },
-          {
-            "file": "../src/applications/applications.controller.ts",
-            "start": 249,
-            "length": 30,
-            "messageText": "Cannot find module './DTO/create-application.dto' or its corresponding type declarations.",
-            "category": 1,
-            "code": 2307
-          },
-          {
-            "file": "../src/applications/applications.controller.ts",
-            "start": 329,
-            "length": 44,
-            "messageText": "Cannot find module './pipes/application-status-validation.pipe' or its corresponding type declarations.",
-            "category": 1,
-            "code": 2307
-          },
-          {
-            "file": "../src/applications/applications.controller.ts",
-            "start": 403,
-            "length": 22,
-            "messageText": "Cannot find module './application.entity' or its corresponding type declarations.",
-            "category": 1,
-            "code": 2307
-          },
-          {
-            "file": "../src/applications/applications.controller.ts",
-            "start": 461,
-            "length": 27,
-            "messageText": "Cannot find module './application-status.enum' or its corresponding type declarations.",
-            "category": 1,
-            "code": 2307
-          },
-          {
-            "file": "../src/applications/applications.controller.ts",
-            "start": 531,
-            "length": 34,
-            "messageText": "Cannot find module './DTO/get-application-filter.dto' or its corresponding type declarations.",
-            "category": 1,
-            "code": 2307
-          }
-        ]
-      ],
       "../src/apps/application-status.enum.ts",
       "../src/apps/application.entity.ts",
       "../src/apps/application.repository.ts",

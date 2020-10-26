@@ -1,4 +1,4 @@
-import { observable, action } from 'mobx';
+import { observable, action } from "mobx";
 
 export default class UserStore {
   @observable username = null;
@@ -13,8 +13,26 @@ export default class UserStore {
   }
 
   @action
-  async signup(username, password) {
-    return this.authService.signup(username, password);
+  async signup(
+    username,
+    password,
+    email,
+    fullname,
+    number,
+    address,
+    postalcode,
+    city
+  ) {
+    return this.authService.signup(
+      username,
+      password,
+      email,
+      fullname,
+      number,
+      address,
+      postalcode,
+      city
+    );
   }
 
   @action
