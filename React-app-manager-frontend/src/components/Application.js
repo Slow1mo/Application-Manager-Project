@@ -57,9 +57,13 @@ class Application extends Component {
                     onChange={this.handleStatusChange}
                     displayEmpty
                   >
-                    <MenuItem value={"OPEN"}>Open</MenuItem>
-                    <MenuItem value={"IN_PROGRESS"}>In Progress</MenuItem>
-                    <MenuItem value={"DONE"}>Done</MenuItem>
+                    <MenuItem value={"OPEN"}>Open for Applications</MenuItem>
+                    <MenuItem value={"IN_PROGRESS"}>
+                      Screening applicants
+                    </MenuItem>
+                    <MenuItem value={"CLOSED"}>
+                      Closed for Applications
+                    </MenuItem>
                   </Select>
                 </FormControl>
               </Grid>

@@ -5,7 +5,7 @@ export class ApplicationStatusValidationPipe implements PipeTransform {
   readonly allowedStatuses = [
     ApplicationStatus.OPEN,
     ApplicationStatus.IN_PROGRESS,
-    ApplicationStatus.DONE,
+    ApplicationStatus.CLOSED,
   ];
 
   transform(value: any) {

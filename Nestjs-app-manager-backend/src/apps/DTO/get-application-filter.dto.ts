@@ -3,7 +3,7 @@ import { ApplicationStatus } from '../application-status.enum';
 
 export class GetApplicationsFilterDTO {
     @IsOptional()
-    @IsIn([ApplicationStatus.OPEN, ApplicationStatus.IN_PROGRESS, ApplicationStatus.DONE])
+    @IsIn([ApplicationStatus.OPEN, ApplicationStatus.IN_PROGRESS, ApplicationStatus.CLOSED])
     status: ApplicationStatus;
     
     @IsOptional()
