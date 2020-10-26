@@ -6,6 +6,7 @@ import { GetTasksFilterDTO } from './DTO/get-tasks-filter.dto';
 import { User } from '../auth/user.entity';
 export declare class TasksController {
     private tasksService;
+    private logger;
     constructor(tasksService: TasksService);
     getTasks(filterDTO: GetTasksFilterDTO, user: User): Promise<Task[]>;
     getTaskById(id: number, user: User): Promise<Task>;

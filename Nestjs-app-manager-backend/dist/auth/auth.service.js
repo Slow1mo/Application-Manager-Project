@@ -22,6 +22,7 @@ let AuthService = class AuthService {
     constructor(userRepository, jwtService) {
         this.userRepository = userRepository;
         this.jwtService = jwtService;
+        this.logger = new common_1.Logger('AuthService');
     }
     async signUp(signupCredentialsDTO) {
         return this.userRepository.signUp(signupCredentialsDTO);
@@ -33,6 +34,7 @@ let AuthService = class AuthService {
         }
         const payload = { username };
         const accessToken = this.jwtService.sign(payload);
+        this.logger.debug(`Generated JWT Token with payload ${JSON.stringify(payload)}`);
         return { accessToken };
     }
 };

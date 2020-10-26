@@ -5,6 +5,7 @@ import { SignUpCredentialsDTO } from './DTO/signup-credentials.dto';
 export declare class AuthService {
     private userRepository;
     private jwtService;
+    private logger;
     constructor(userRepository: UserRepository, jwtService: JwtService);
     signUp(signupCredentialsDTO: SignUpCredentialsDTO): Promise<void>;
     signIn(authCredentialsDTO: AuthCredentialsDTO): Promise<{
