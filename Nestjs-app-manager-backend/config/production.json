@@ -1,4 +1,8 @@
 {
+    "server": {
+        "origin":"http://cristian-react-app-manager-frontend.s3-website-eu-west-1.amazonaws.com"
+    },
+    
     "db": {
         "synchronize": false
     }

@@ -10,7 +10,7 @@ exports.UserRepository = void 0;
 const typeorm_1 = require("typeorm");
 const user_entity_1 = require("./user.entity");
 const common_1 = require("@nestjs/common");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 let UserRepository = class UserRepository extends typeorm_1.Repository {
     async signUp(authCredentialsDTO) {
         const { username, password } = authCredentialsDTO;
