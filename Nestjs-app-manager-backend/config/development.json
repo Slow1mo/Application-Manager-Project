@@ -6,7 +6,7 @@
         "synchronize": true
     },
     "jwt": {
-        "secret":" qaz1@WSX3edc"
+        "secret":"qaz1@WSX3edc"
     }
 }
 
